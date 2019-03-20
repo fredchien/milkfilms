@@ -283,7 +283,7 @@ a.article:hover {
 }
 .header-content{
     background: url(assets/img/header.png) no-repeat;
-    height: 118px;
+    min-height: 118px;
     background-size: cover;
     padding: 20px;
     p{
