@@ -115,7 +115,7 @@ a.article, a.article:hover { background: #6d7fcc !important; color: #fff !import
 ----------------------------------------------------- */
 #content { width: 100%; min-height: 100vh; transition: all 0.3s; }
 
-.header-content { background: url(assets/img/header.png) no-repeat; height: 118px; background-size: cover; padding: 20px; }
+.header-content { background: url(assets/img/header.png) no-repeat; min-height: 118px; background-size: cover; padding: 20px; }
 
 .header-content p { color: white; }
 
