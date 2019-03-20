@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title></title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/img/logo.png" alt="">
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Produto 1</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#sec0">Defesa</a>
+                        </li>
+                        <li>
+                            <a href="#sec1">Enredo</a>
+                        </li>
+                        <li>
+                            <a href="#sec2">Personagens</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Produto 2</a>
+                </li>
+                <li>
+                    <a href="#">Produto 3</a>
+                </li>
+                <li>
+                    <a href="#">Produto 4</a>
+                </li>
+                <li>
+                    <a href="#proposta">Proposta Comercial</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <button class="download" onclick="createPDF();">Baixar pdf</button>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content  -->
+        <div id="content">
+        	<div class="header-content">
+				<div class="container-fluid">
+		    		<div class="row">
+		    			<div class="col-lg-3">
+		    				<p class="green">Cliente</p>
+		    				<p>Nome do cliente</p>
+		    			</div>
+		    			<div class="col-lg-3">
+		    				<p class="green">Projeto</p>
+                            <p>Nome do projeto</p>
+		    			</div>
+		    			<div class="col-lg-3">
+		    				<p class="green">Data</p>
+                            <p>2019</p>
+		    			</div>
+		    		</div>
+		    	</div>	
+	    	</div>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                	
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+            <div class="conteudo" id="renderPDF">
+                <div id="sec0">
+                    <h2>Produto 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+
+            <div id="sec1">
+                <h3>Defesa</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div id="sec2">
+                <h3>Enredo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>    
+            <div id="proposta">
+
+                <h2>Proposta<br>Comercial</h2>
+                <h3>Descrição</h3>
+                <button type="button" class="btn btn-primary btn-debitos" onclick="checkAll()">Selecionar todos</button>
+                <button type="button" class="btn btn-default" onclick="clearAll()" style="background: transparent;">Limpar</button>
+                
+                <ul class="props">
+                    <li>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck0" value="212,42"  name="checkObrigatoria0">
+                            <label class="custom-control-label text-left row" for="customCheck0">
+                                <div class="col-lg-10">
+                                <strong>Design de Interface e Experiência do Usuário</strong><br>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla laudantium, obcaecati sit esse impedit debitis officiis suscipit molestias magni animi, earum et cupiditate voluptates ipsa adipisci ex commodi ut aut.
+                                </div>
+                                <div class="col-lg-2">
+                                <span class="text-right">
+                                    R$ 212,42
+                                </span>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1" value="312,42"  name="checkObrigatoria1">
+                            <label class="custom-control-label text-left row" for="customCheck1">
+                                <div class="col-lg-10">
+                                <strong>Design de Interface e Experiência do Usuário</strong><br>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla laudantium, obcaecati sit esse impedit debitis officiis suscipit molestias magni animi, earum et cupiditate voluptates ipsa adipisci ex commodi ut aut.
+                                </div>
+                                <div class="col-lg-2">
+                                <span class="text-right">
+                                    R$ 312,42
+                                </span>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                    <input type="hidden" id="cont" value="2">
+                </ul>
+                <div class="row subtotal">
+                    <div class="col-12 col-sm-4 text-left">
+                        Total: <strong id="total">R$ 0,00</strong>
+                    </div>
+                </div>
+            </div>    
+            </div>    
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script> 
+    <script src="//cdn.jsdelivr.net/npm/canvas2image@1.0.5/canvas2image.min.js"></script>
+
+
+    <script language="javascript">
+    (function($){
+        $.fn.createPdf = function(parametros) {
+            
+            var config = {              
+                'fileName':'html-to-pdf'
+            };
+            
+            if (parametros){
+                $.extend(config, parametros);
+            }                            
+            var quotes = document.getElementById($(this).attr('id'));
+            html2canvas(quotes, {
+                onrendered: function(canvas) {
+                    var pdf = new jsPDF('p', 'pt', 'letter');
+                    for (var i = 0; i <= quotes.clientHeight/980; i++) {
+                        var srcImg  = canvas;
+                        var sX      = 0;
+                        var sY      = 980*i;
+                        var sWidth  = 900;
+                        var sHeight = 980;
+                        var dX      = 0;
+                        var dY      = 0;
+                        var dWidth  = 900;
+                        var dHeight = 980;
+                        window.onePageCanvas = document.createElement("canvas");
+                        onePageCanvas.setAttribute('width', 900);
+                        onePageCanvas.setAttribute('height', 980);
+                        var ctx = onePageCanvas.getContext('2d');
+                        ctx.drawImage(srcImg,sX,sY,sWidth,sHeight,dX,dY,dWidth,dHeight);
+                        var canvasDataURL = onePageCanvas.toDataURL("image/png", 1.0);
+                        var width         = onePageCanvas.width;
+                        var height        = onePageCanvas.clientHeight;
+                        if (i > 0) {
+                            pdf.addPage(612, 791);
+                        }
+                        pdf.setPage(i+1);
+                        pdf.addImage(canvasDataURL, 'PNG', 20, 40, (width*.62), (height*.62));
+                    }
+                    pdf.save(config.fileName);
+                }
+            });
+        };
+    })(jQuery);
+     
+    function createPDF() {
+        $('#renderPDF').createPdf({
+            'fileName' : 'testePDF'
+        });
+    }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+
+        function checkAll(){
+            $("input[type=checkbox]").prop( "checked", true );
+            generateValue();
+        }
+
+        function clearAll(){
+            $("input[type=checkbox]").prop( "checked", false );
+            generateValue();
+            // taxa de serviço
+            valor_total = 0;
+        }
+        $("input[type=checkbox]").on( "click", function() {
+            generateValue();
+        });  
+        function generateValue(){
+            var cont = $("#cont").val();
+            soSelecionados = '';
+            debitos = 0;
+            valor_total = 0;
+            for (let i = 0; i < cont; i++) {
+                if($("#customCheck"+i).is(':checked')){
+                    var value = $("#customCheck"+i).val();
+                    if(value.length > 6){
+                        debitos += parseFloat(String(value).replace(".",""));
+                    } 
+                    debitos += parseFloat(String(value).replace(",","."));
+
+                    var itensSelected = $('label[for="customCheck'+i+'"]').html().split("</strong>");
+                    itensSelected = itensSelected[0].replace("<strong>","");                                                
+                    itensSelected = itensSelected.replace("                                                ","");                                                
+                    soSelecionados += '<br>'+itensSelected;
+                }
+            }
+            valor_total = debitos;
+            $("#total").html( "R$ " + String(valor_total.toFixed(2)).replace(".",","));
+            $("#debitos").html( "R$ " + String(debitos.toFixed(2)).replace(".",","));
+            console.log(soSelecionados);
+        }
+    </script>
+</body>
+
+</html>

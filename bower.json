@@ -1,0 +1,18 @@
+{
+  "name": "milkfilms",
+  "description": "Novo site institucional milkfilms.",
+  "main": "index.html",
+  "authors": [
+    "Frederic Chien"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/fredchien/milkfilms",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets",
+    "test",
+    "tests"
+  ]
+}
